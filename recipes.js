@@ -21,7 +21,7 @@ var recipes = [
     },
     {
         name: "Chocolate Chip Cookies",
-        catergory: "Dessert recipes",
+        category: "Dessert",
         procedure: [
             "Preheat oven to 375°F (210°C), or 350°F (195°C) if you want chewy cookies.",
             "Cream butter (or margarine), granulated sugar, and brown sugar in a large mixer bowl.",

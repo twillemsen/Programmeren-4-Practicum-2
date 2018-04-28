@@ -11,9 +11,28 @@ router.get('/info', function(request, response) {
     });
 });
 
-router.get("/recipes", function(req, res) {
+router.get("/recipes", (req, res) => {
+    let category = req.query.category;
+
+    if (category != null) {
+        res.status(200);
+
+        let recipe = recipes.filter(function(item) {
+            return (item.category == category);
+        });
+    
+        res.json(recipe);
+    } else {
+        res.status(200);
+
+        res.json(recipes);
+    }
+});
+
+router.get("/recipes/:number", function(req, res) {
     res.status(200);
-    res.json(recipes).end();
+    const number = req.params.number
+    res.json(recipes[number - 1]);
 });
 
 router.get('*', function(req, res) {
