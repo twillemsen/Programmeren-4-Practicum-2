@@ -13,9 +13,12 @@ app.use(bodyParser.json());
 // Installeer Morgan als logger
 app.use(morgan('dev'));
 
-app.use('*', function(req, res, next){
-	next();
+app.all('*', function(request, response, next) {
+    console.log(request.method + " " + request.url);
+    next();
 });
+
+app.use('/api/v1', require('./routes/routes_api_v1'));
 
 app.get('/api/test', function (req, res, next) {
 	let test = {
