@@ -33,3 +33,5 @@ app.get('/api/test', function (req, res, next) {
 app.listen(app.get("PORT"), () => {
 	console.log('De server draait op port 8080');
 });
+
+module.exports = app;
