@@ -30,8 +30,10 @@ app.get('/api/test', function (req, res, next) {
 	res.send(test);
 });
 
-app.listen(app.get("PORT"), () => {
-	console.log('De server draait op port 8080');
+const port = process.env.PORT || app.get("PORT");
+
+app.listen(port, () => {
+	console.log('De server draait op port ' + port);
 });
 
 module.exports = app;
