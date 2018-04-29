@@ -4,16 +4,28 @@ var recipes = [
     {
         name: 'Lasagne',
         category: 'Pasta',
+        ingredients: ["2 Tbsp olive oil",
+        "1 large onion,(Optionally: 2 Carrots and 2 Celery) finely chopped",
+        "3 lbs (1.5 kilo) minced (ground) beef",
+        ],
         procedure: 'Steps for making lasagne'
     },
     {
         name: 'Calzone',
         category: 'Pizza',
+        ingredients: ["1 cup (240 mL) ricotta cheese",
+        "1 cup (240 mL) shredded mozzarella cheese",
+        "4 ounces (115 g) any topping (such as ham, bacon, salami, pepperoni, and/or sausage) (optional)"
+        ],
         procedure: 'Steps to make calzone (pizza)'
     },
     {
         name: 'Tuna Salad',
         category: 'Salad',
+        ingredients: ["1 can tuna",
+        "1 can water chestnuts, drained and chopped",
+        "½ small onion, chopped"
+        ],
         procedure: [
             'Mix ingredients in a bowl',
             'Chill before serving'
@@ -22,6 +34,10 @@ var recipes = [
     {
         name: "Chocolate Chip Cookies",
         category: "Dessert",
+        ingredients: ["2 sticks (½ lb / 225 grams / 1 cup) butter (and only butter), softened",
+        "¾ cup (180ml) granulated white sugar",
+        "¾ cup (180ml) packed brown sugar"
+        ],
         procedure: [
             "Preheat oven to 375°F (210°C), or 350°F (195°C) if you want chewy cookies.",
             "Cream butter (or margarine), granulated sugar, and brown sugar in a large mixer bowl.",
@@ -34,4 +50,5 @@ var recipes = [
         ]
     }
 ];
+
 module.exports = recipes;

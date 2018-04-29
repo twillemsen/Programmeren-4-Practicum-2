@@ -13,6 +13,7 @@ router.get('/info', function(request, response) {
 
 router.get("/recipes", (req, res) => {
     let category = req.query.category;
+    let ingredients = req.query.ingredients;
 
     if (category != null) {
         res.status(200);
@@ -21,6 +22,14 @@ router.get("/recipes", (req, res) => {
             return (item.category == category);
         });
     
+        res.json(recipe);
+    } else if (ingredients != null) {
+        res.status(200);
+
+        let recipe = recipes.filter(function(item) {
+            return (item.ingredients.includes(ingredients) == ingredients.includes(ingredients));
+        });
+
         res.json(recipe);
     } else {
         res.status(200);
